@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Homework Page</h1>
+
+<h3>{{ template_lang | title }} Homework:</h3>
+
+
+    <ul>
+        {% for id in template_hwork[template_lang] %}
+        <li>{{ id }}</li>
+        {% endfor %}
+    </ul>
+
+
+{% endblock %}

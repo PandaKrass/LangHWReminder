@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>{{ template_lang | title }}</h1>
+
+<form action="{{ url_for('language', lang_id=template_id) }}" method="POST">
+    {{ template_form.hidden_tag() }}
+    <p>{{ template_form.text_field.label }}</p>
+    {{ template_form.text_field() }}
+    <p>{{ template_form.submit() }}</p>
+</form>
+
+<a href="{{url_for('homework', lang_id=template_id)}}">Homework</a>
+
+{% endblock %}
+
+
